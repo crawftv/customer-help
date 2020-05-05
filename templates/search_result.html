@@ -10,9 +10,14 @@
             <p>{{ search_result["text"] }}</p>
             <form action="/submit_rating/{{ search_result['rowid'] }}" method="post">
                 <button class="btn">Positive</button>
+                <input type="hidden" id="label" name="label" value="positive">
+                <input type="hidden" id="search_term" name="search_term" value={{search_term}}>
             </form>
             <form action="/submit_rating/{{ search_result['rowid'] }}" method="post">
                 <button class="btn primary">Negative</button>
+                <input type="hidden" id="label" name="label" value="negative">
+                <input type="hidden" id="search_term" name="search_term" value={{search_term}}>
+            </form>
             </form>
 
         </div>
