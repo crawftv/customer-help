@@ -1,0 +1,21 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css" />
+</head>
+
+<body>
+    <div class="c">
+        <h1>Label Data</h1>
+        <h2>for term: <i>{{ search_term }}</i></h2>
+        <div class="card">
+            <p>{{ search_result["text"] }}</p>
+            <form action="/submit_rating/{{ search_result['rowid'] }}" method="post">
+                <button class="btn">Positive</button>
+            </form>
+            <form action="/submit_rating/{{ search_result['rowid'] }}" method="post">
+                <button class="btn primary">Negative</button>
+            </form>
+
+        </div>
+    </div>
+
+</body>
