@@ -38,7 +38,11 @@ class Search(object):
             dict_factory = lambda c, r: dict(zip([col[0] for col in c.description], r))
             conn.row_factory = dict_factory
             query = (
+<<<<<<< HEAD
                 "SELECT text,rowid,rating FROM data WHERE data MATCH (?) LIMIT 1"
+=======
+                "SELECT text,rowid,rating FROM data WHERE data MATCH (?) ORDER BY RANDOM() LIMIT 1"
+>>>>>>> push-large-data
             )
             search_result = conn.execute(query,(search_term,)).fetchone()
         resp.context["search_result"] = search_result
@@ -50,7 +54,11 @@ class Search(object):
             dict_factory = lambda c, r: dict(zip([col[0] for col in c.description], r))
             conn.row_factory = dict_factory
             query = (
+<<<<<<< HEAD
                 "SELECT text,rowid,rating FROM data WHERE data MATCH (?) LIMIT 1"
+=======
+                "SELECT text,rowid,rating FROM data WHERE data MATCH (?) ORDER BY RANDOM() LIMIT 1"
+>>>>>>> push-large-data
             )
             search_result = conn.execute(query,(search_term,)).fetchone()
         resp.context["search_term"] = search_term
