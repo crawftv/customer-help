@@ -1,10 +1,10 @@
 import falcon
 import sqlite3
 import json
-
+from labels import labels
 from falcon_jinja2 import FalconTemplate
 
-labels = ["positive", "negative", "undecidable"]
+
 falcon_template = FalconTemplate()
 app = falcon.API()
 
